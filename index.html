@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto MoonIdeas</title>
+    <link rel="icon" href="./assets/img/moon.svg" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav">
+        <a class="logo" href="index.html"
+          ><img src="./assets/img/logo.png" alt="Logo MoonIdeas"
+        /></a>
+        <div class="nav-container">
+          <ul>
+            <li class="shop">
+              <a href="#">SHOP<img src="./assets/icons/arrowDown.png" /></a>
+              <ul class="shop-container">
+                <li><a href="">Nueva colección</a></li>
+                <li><a href="">Vestimenta</a></li>
+                <li><a href="">Accesorios</a></li>
+                <li><a href="">Calzado</a></li>
+                <li>
+                  <a href=""><span class="sales">SALE</span></a>
+                </li>
+              </ul>
+            </li>
+            <li class="colection">
+              <a href="#"
+                >NUEVA COLECCIÓN<img src="./assets/icons/arrowDown.png"
+              /></a>
+              <ul class="colection-container">
+                <li><a href="">Primavera - Verano</a></li>
+                <li><a href="">Invierno - Otoño</a></li>
+              </ul>
+            </li>
+            <li><a href="">ABOUT US</a></li>
+            <li><a href="">CONTACTO</a></li>
+          </ul>
+          <div class="register">
+            <a href="#"><img src="./assets/icons/user.png" alt="Usuario" /></a>
+            <a href="#"
+              ><img src="./assets/icons/heart.png" alt="Favoritos"
+            /></a>
+            <div class="cart">
+              <a href="#"
+                ><img src="./assets/icons/cart.png" alt="Carrito" />
+                <span class="counter">(3)</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <img class="hamb" src="./assets/icons/hamb.png" alt="Menu">
+      <div class="image-gallery">
+        <img src="./assets/img/slide1.png" alt="foto-1" class="visible" />
+        <img src="./assets/img/slide2.png" alt="foto-2" />
+        <img src="./assets/img/slide3.png" alt="foto-3" />
+      </div>
+    </header>
+
+    <main>
+      <section class="products">
+        <h3>NUESTROS FAVORITOS</h3>
+        <div class="products-container">
+          <article class="card">
+            <a href="#">
+              <img
+                class="card-img"
+                src="./assets/img/image1.png"
+                alt="product-1"
+              />
+            </a>
+            <p class="sale">SALE</p>
+            <div class="card-info">
+              <div>
+                <p>Pantalón Azul</p>
+                <h4 class="price"><span class="no-price">$1000</span> $900</h4>
+              </div>
+              <div class="heart">
+                <img src="./assets/icons/heart.png" alt="corazon" />
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <a href="#">
+              <img
+                class="card-img"
+                src="./assets/img/image2.png"
+                alt="product-1"
+              />
+            </a>
+            <div class="card-info">
+              <div>
+                <p>Camisa de lino celeste</p>
+                <h4 class="price">$860</h4>
+              </div>
+              <div class="heart">
+                <img src="./assets/icons/heart.png" alt="corazon" />
+              </div>
+            </div>
+          </article>
+          <article class="card">
+            <a href="#">
+              <img
+                class="card-img"
+                src="./assets/img/image3.png"
+                alt="product-1"
+              />
+            </a>
+            <div class="card-info">
+              <div>
+                <p>Chaqueta Moonideas</p>
+                <h4 class="price">$1500</h4>
+              </div>
+              <div class="heart">
+                <img src="./assets/icons/heart.png" alt="corazon" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="banner">
+        <img src="./assets/img/banner.png" alt="banner">
+        <div class="text-banner">
+          <h2>NUEVA COLECCIÓN</h2>
+          <a href="#">ver más</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <h2>Suscribite a nuestro <span class="footer-span">newsletter</span></h2>
+      <form class="form" action="">
+        <input type="email" placeholder="Email">
+        <button class="btn">SUSCRIBIRME</button>
+      </form>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

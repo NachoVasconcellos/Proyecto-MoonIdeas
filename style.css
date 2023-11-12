@@ -1,0 +1,303 @@
+@font-face {
+  font-family: SFPRODISPLAY;
+  src: url(./assets/fonts/SFPRODISPLAYREGULAR.OTF);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: SFPRODISPLAY, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Header y NavBar */
+
+header {
+  height: 100vh;
+  width: auto;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  width: 90vw;
+  height: 74px;
+  top: 39px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0 20px;
+  z-index: 100;
+  position: fixed;
+  background-color: #ffffffcc;
+  border: 1px solid #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav:hover {
+  background-color: #ffffff;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav-container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav-container ul li {
+  margin-right: 30px;
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nav-container ul li a {
+  color: #000000;
+}
+.nav-container ul li a img {
+  margin: 0px 0px 2px 5px;
+}
+
+.shop ul {
+  width: 198px;
+  height: 264px;
+  top: 80px;
+  right: 500px;
+  padding-left: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sales {
+  font-weight: bold;
+}
+
+.colection ul {
+  width: 198px;
+  height: 184px;
+  top: 80px;
+  right: 380px;
+  padding-left: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+}
+
+.nav-container :hover > ul {
+  display: flex;
+}
+
+.hamb {
+  display: none;
+}
+
+.register img {
+  margin-left: 20px;
+}
+.register,
+.cart {
+  display: flex;
+}
+
+.counter {
+  color: #000000;
+}
+
+.image-gallery {
+  position: relative;
+  height: 100%;
+}
+
+.image-gallery img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.image-gallery img.visible {
+  opacity: 1;
+}
+
+
+/* Seccion Productos */
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 60px;
+}
+
+.products h3 {
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.products-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.card-img {
+    width: 100%;
+}
+
+.sale {
+    position: absolute;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    font-size: 13px;
+    top: 25px;
+    right: 0px;
+    padding: 5px 25px 5px 10px;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.card-info p {
+    margin-bottom: 5px;
+}
+
+.card-info img {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.price {
+    font-weight: 700;
+}
+
+.no-price {
+    color: #B3B3B3;
+    text-decoration: line-through;
+}
+
+/* Banner */
+
+.banner {
+  width: auto;
+  height: 447px;
+  margin-top: 55px;
+  position: relative;
+  
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-banner {
+  color: #ffffff;
+  top: 204px;
+  left: 80px;
+  position: absolute;
+}
+
+.text-banner h2 {
+  font-size: 33px;
+}
+
+.text-banner a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+/* Footer */
+.footer {
+  /* width: auto; */
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+}
+
+.footer h2 {
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+}
+
+.footer-span {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.form {
+  display: flex;
+  width: 626px;
+  height: 63px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  align-items: center;
+}
+
+.btn {
+  width: 25%;
+  background-color: #ffffff;
+  font-weight: 600;
+}
+
+.btn, .form input {
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form input {
+  width: 80%;
+  border-style: none;
+  padding-left: 15px;
+}
+
