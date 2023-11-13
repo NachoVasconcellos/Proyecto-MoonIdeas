@@ -144,80 +144,79 @@ a {
   opacity: 1;
 }
 
-
 /* Seccion Productos */
 
 .products {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 60px;
 }
 
 .products h3 {
-    font-weight: 400;
-    font-size: 18px;
-    margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 30px;
 }
 
 .products-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
 }
 
 .card-img {
-    width: 100%;
+  width: 100%;
 }
 
 .sale {
-    position: absolute;
-    text-align: center;
-    background-color: #000000;
-    color: #ffffff;
-    font-size: 13px;
-    top: 25px;
-    right: 0px;
-    padding: 5px 25px 5px 10px;
+  position: absolute;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  font-size: 13px;
+  top: 25px;
+  right: 0px;
+  padding: 5px 25px 5px 10px;
 }
 
 .card-info {
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: 13px;
-    font-weight: 400;
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .card-info p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .card-info img {
-    margin-right: 15px;
-    cursor: pointer;
+  margin-right: 15px;
+  cursor: pointer;
 }
 
 .price {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .no-price {
-    color: #B3B3B3;
-    text-decoration: line-through;
+  color: #b3b3b3;
+  text-decoration: line-through;
 }
 
 /* Banner */
@@ -227,7 +226,6 @@ a {
   height: 447px;
   margin-top: 55px;
   position: relative;
-  
 }
 
 .banner img {
@@ -289,7 +287,8 @@ a {
   font-weight: 600;
 }
 
-.btn, .form input {
+.btn,
+.form input {
   border: none;
   outline: none;
   cursor: pointer;
@@ -301,3 +300,135 @@ a {
   padding-left: 15px;
 }
 
+/* Responsive desing */
+
+@media (max-width: 1024px) {
+  .header {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .hamb {
+    display: block;
+    cursor: pointer;
+  }
+  .nav-container ul {
+    width: 70vw;
+    height: 200px;
+    top: 80px;
+    left: 10px;
+    padding: 30px;
+    background-color: #ffffff;
+    position: absolute;
+    display: none;
+  }
+
+  .nav-container ul li {
+    font-size: 20px;
+  }
+
+  .logo {
+    padding: 3px 0px 0px 15px;
+  }
+
+  .user,
+  .favorite {
+    display: none;
+  }
+
+  .logo img,
+  .cart a img {
+    height: 13.5px;
+  }
+
+  .products-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-img {
+    width: 90vw;
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .image-gallery img.visible {
+    display: none;
+  }
+
+  .image-gallery {
+    background-image: url("./assets/img/mobile1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: auto;
+  }
+
+  .banner img {
+    display: none;
+  }
+
+  .banner::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("./assets/img/mobile2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .form {
+    /* align-items: center; */
+    width: 460px;
+  }
+
+  .btn {
+    width: 40%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav {
+    width: 354px;
+    height: 58px;
+    top: 20px;
+  }
+
+  header {
+    height: 561px;
+  }
+
+  .products {
+    padding-top: 40px;
+  }
+
+  .products h3 {
+    margin-bottom: 10px;
+  }
+
+  .text-banner {
+    top: 340px;
+    left: 30px;
+  }
+  .text-banner h2 {
+    height: 39px;
+    font-size: 33px;
+    font-weight: 600;
+  }
+  .text-banner a {
+    margin: 0px;
+  }
+
+  .footer h2 {
+    font-size: 28px;
+    width: 300px;
+    text-align: center;
+    line-height: normal;
+    margin-bottom: 10px;
+  }
+
+  .form {
+    width: 327px;
+    height: 45px;
+  }
+}
