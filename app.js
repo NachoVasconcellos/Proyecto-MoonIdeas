@@ -1,4 +1,4 @@
-// Función para galería de imágenes
+// Función para imágenes
 $(document).ready(function () {
   const images = $(".image-gallery img");
   let index = 0;
