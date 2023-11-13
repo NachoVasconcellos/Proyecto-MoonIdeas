@@ -1,4 +1,4 @@
-// funcion para galeria de imagenes
+// Función para galería de imágenes
 $(document).ready(function () {
   const images = $(".image-gallery img");
   let index = 0;
@@ -9,20 +9,27 @@ $(document).ready(function () {
     images.eq(index).addClass("visible");
   }
 
-  setInterval(showNextImage, 5000);
+  function startImageGallery() {
+    setInterval(showNextImage, 5000);
+  }
+
+  startImageGallery();
 });
 
-//funcion para menu hamburguesa
-
+// Función para menú hamburguesa
 $(document).ready(function () {
-  $(".hamb").click(function () {
+  function toggleNavHamburger() {
     $("#nav-hamb").slideToggle();
-  });
+  }
+
+  function resetNavHamburgerStyle() {
+    if (window.innerWidth >= 1024) {
+      $("#nav-hamb").removeAttr("style");
+    }
+  }
+
+  $(".hamb").click(toggleNavHamburger);
 
   // Al cambiar el tamaño de la pantalla
-  $(window).resize(function () {
-    if (window.innerWidth >= 1024) {
-      $("#nav-hamb").removeAttr("style"); // Elimina el estilo inline
-    }
-  });
+  $(window).resize(resetNavHamburgerStyle);
 });
