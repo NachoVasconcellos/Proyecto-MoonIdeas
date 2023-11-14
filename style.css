@@ -72,8 +72,30 @@ nav, li, a {
   margin: 0px 0px 2px 5px;
 }
 
-.shop ul, .sales, .colection ul {
+.shop ul {
   width: 198px;
+  height: 264px;
+  top: 80px;
+  right: 475px;
+  padding-left: 30px;
+  background-color: #ffffff;
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  align-items: start;
+}
+
+.sales {
+  font-weight: bold;
+}
+
+.colection ul {
+  width: 198px;
+  height: 154px;
+  top: 80px;
+  right: 370px;
+  padding-left: 30px;
+  background-color: #ffffff;
   position: absolute;
   display: none;
   flex-direction: column;
@@ -99,6 +121,8 @@ nav, li, a {
 
 .counter {
   color: #000000;
+  margin:1px 6px 0px 7px;
+  font-size: 13px;
 }
 
 /* Galería de imágenes */
@@ -274,6 +298,10 @@ nav, li, a {
   padding-left: 15px;
 }
 
+.form input::placeholder {
+  color: #000;
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   header {
@@ -285,23 +313,63 @@ nav, li, a {
     display: block;
   }
 
+  .nav {
+    height: 60px;
+  }
+
   .nav-container ul {
-    width: 70vw;
-    height: 200px;
-    top: 80px;
-    left: 10px;
-    padding: 30px;
-    background-color: #ffffff;
-    position: absolute;
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 74px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+  }
+
+  .nav-container ul.active {
+    display: flex;
   }
 
   .nav-container ul li {
-    font-size: 20px;
+    margin: 0;
+    padding: 10px 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .shop ul,
+  .colection ul {
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 160px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    flex-direction: column;
+  }
+
+  .shop ul.active,
+  .colection ul.active {
+    display: flex;
+  }
+
+  .shop ul li,
+  .colection ul li {
+    margin: 0;
+    padding: 10px 30px 20px 0px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
   }
 
   .logo {
-    padding: 3px 0px 0px 15px;
+    padding: 3px 0px 0px 40px;
   }
 
   .user, .favorite {
@@ -366,7 +434,7 @@ nav, li, a {
   }
 
   header {
-    height: 561px;
+    height: 100vh;
   }
 
   .products {
